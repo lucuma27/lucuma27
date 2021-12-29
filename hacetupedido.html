@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,11 @@
     <link rel="shortcut icon" href="fotos/Logo.png">
     <link rel="stylesheet" href="estilo.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
+
 <body>
     <header>
         <nav>
@@ -16,12 +21,12 @@
             <label for="check" class="checkbtn">
                 <i class="fas fa-bars"></i>
             </label>
-        <div class="imagen">
-        <img src="fotos/Logo.png" alt="Logo">
-        </div>
-        <div class="txtlogo">
-            <p>Doña <span>Lita</span></p>
-        </div>
+            <div class="imagen">
+                <img src="fotos/Logo.png" alt="Logo">
+            </div>
+            <div class="txtlogo">
+                <p>Doña <span>Lita</span></p>
+            </div>
             <ul>
                 <li class="menu"><a href="index.html">Inicio</a></li>
                 <li class="menu"><a href="contacto.html">Contacto</a></li>
@@ -30,87 +35,127 @@
                 <li class="menu"><a href="encontranos.html">Encontranos</a></li>
 
             </ul>
-            
+
         </nav>
     </header>
 
     <main>
-        <h1>Encargá tus pastas</h1>
+        <h1 class="contacto">Encargá tus pastas</h1>
 
-        <p class="parrafo">Antes de que encargues, te pedimos tu numero de telefono para contactarnos y dia de entrega.</p>
+        <p class="parrafo">Antes de que encargues, te pedimos tu numero de telefono para contactarnos y dia de entrega.
+        </p>
         <div class="formulario">
 
-        <form action="hacetupedido.html" method="post" enctype="application/x-www-form-urlencoded">
-        <label for="telefono"> Tu telefono</label>
-        <input class="edit_label"  type="number" name="telefono" placeholder="Escribí tu numero"  required> <br> <br>
+            <form action="hacetupedido.html" method="post" enctype="application/x-www-form-urlencoded">
+                <label for="telefono"> Tu telefono</label>
+                <input class="edit_label" type="number" name="telefono" placeholder="Escribí tu numero" required> <br>
+                <br>
 
-        <label for="dia" > Dia de entrega</label>
-        <input class="edit_label"  type="date" name="dia" required> <br> <br>
-    </div>
+                <label for="dia"> Dia de entrega</label>
+                <input class="edit_label" type="date" name="dia" required> <br> <br>
+        </div> <br> <br>
 
-        <p>Elegi la pasta que queres:</p>
-        <div class="contenedor">
-            <div class="columna">
-                
-            <label>
-                <label for="Sorrentinos">Sorrentinos $250</label>
-                <input class="check" type="checkbox" name="Sorrentinos"> <br>
-                <div>
-                    <img  class="sorrenti" src="fotos/sorrentinos.jpg"><br><br><br><br><br><br><br><br><br><br>
-                    <label for="cant"> Cantidad</label><br>
-                    <input class="cantidades sorrenti" type="number" name="cant" placeholder="Por docena"><br> <br> 
+        <div class="row mx-5">
+            <div class="card-columns">
+
+                <div class="col">
+                    <div class="card" style="width:400px">
+                        <img class="card-img-top" img class="sorrenti" src="fotos/sorrentinos.jpg">
+                        <div class="card-body">
+                            <h4 class="card-title">Sorrentinos</h4>
+                            <div class="form-group">
+                                <label for="cant">Cantidad<p class="card-text">$250</p> </label>
+                                <br>
+                                <input class="form-control" class="cantidades" type="number" name="cant"
+                                    placeholder="Por docena">
+                            </div>
+                            <a href="#" class="btn btn-primary">Hace tu pedido</a>
+                        </div>
+
+                    </div>
                 </div>
-            </label>
-            <label>
-                <label for="Canelones">Canelones $400</label>
-                <input class="check" type="checkbox" name="Canelones"><br>
-                <img  class="canel" src="fotos/canelones.jpg"> <br>
-                <label for="cant">Cantidad</label> <br>
-                <input class="cantidades" type="number" name="cant" placeholder="Por docena"> 
-            </label>
-        </div>
+            <div class="col">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" img class="canel" src="fotos/canelones.jpg"> <br>
 
-        <div class="columna">
-
-            <label>
-                <label for="Ravioles">Ravioles $200</label>
-                <input class="check" type="checkbox" name="Ravioles"><br>
-                <img  class="raviol" src="fotos/ravioles.jpg"><br>
-                <label for="cant">Cantidad</label> <br>
-                <input class="cantidades" type="number" name="cant" placeholder="Por plancha"> <br><br>
-            </label>  
-
-
-            <label>
-                <label for="Raviolones">Raviolones $350</label>
-                <input class="check" type="checkbox" name="Raviolones"><br>
-                <div>
-                    <img  class="raviolon" src="fotos/raviolones.jpg"> <br><br><br><br><br><br><br><br><br><br>
-                    <label for="cant">Cantidad</label> <br> 
-                    <input class="cantidades" type="number" name="cant" placeholder="Por docena">
+                    <div class="card-body">
+                        <h4 class="card-title">Canelones</h4>
+                        <div class="form-group">
+                            <label for="cant">Cantidad<p class="card-text">$400</p> </label>
+                            <br>
+                            <input class="form-control" class="cantidades" type="number" name="cant"
+                                placeholder="Por docena">
+                        </div>
+                        <a href="#" class="btn btn-primary">Hace tu pedido</a>
+                    </div>
                 </div>
-            </label>
-        </div>
+            </div>
 
-        <div class="columna">
+                <div class="col">
+                    <div class="card" style="width:395px">
+                        <img class="card-img-top" img class="raviol" src="fotos/ravioles.jpg"><br>
+                        <div class="card-body">
+                            <h4 class="card-title">Ravioles</h4>
+                            <div class="form-group">
+                                <label for="cant">Cantidad<p class="card-text">$200</p> </label>
+                                <input class="form-control" class="cantidades" type="number" name="cant" placeholder="Por plancha">
+                            </div>
+                            <a href="#" class="btn btn-primary">Hace tu pedido</a>
+                        </div>
+                </div>
+            </div>
 
-            <label>
-                <label for="Spaghettis">Spaghettis $360</label>
-                <input class="check" type="checkbox" name="Spaghettis"><br>
-                <img class="fideos" src="fotos/fideoslar.jpg"> <br>
-                <label for="cant">Cantidad</label> <br>
-                <input class="cantidades" type="number" name="cant" placeholder="Por kilo"><br><br>
-            </label>
 
-            <label>
-                <label for="Lasagna">Lasagna $800</label>
-                <input class="check" type="checkbox" name="Lasagna"><br>
-                <img  class="lasagna" src="fotos/Lasagna.jpg"> <br>
-                <label for="cant">Cantidad</label> <br>
-                <input class="cantidades" type="number" name="cant" placeholder="Por kilo">
-            </label>
-        </div>
+            <div class="col">
+                <div class="card" style="width:395px">
+                    <img class="card-img-top" img class="Raviolones" src="fotos/raviolones.jpg"> <br>
 
+                    <div class="card-body">
+                        <h4 class="card-title">Raviolones</h4>
+                        <div class="form-group">
+                            <label for="cant">Cantidad<p class="card-text">$350</p> </label>
+                            <input class="form-control" class="cantidades" type="number" name="cant"
+                                placeholder="Por docena">
+                        </div>
+                        <a href="#" class="btn btn-primary">Hace tu pedido</a>
+                    </div>
+                </div>
+            </div>
+
+
+                <div class="col">
+                    <div class="card" style="width:393px">
+                        <img class="card-img-top" img class="fideos" src="fotos/fideoslar.jpg">
+
+                        <div class="card-body">
+                            <h4 class="card-title">Spaghettis</h4>
+                            <div class="form-group">
+                                <label for="cant">Cantidad<p class="card-text">$360</p> </label>
+                                <br>
+                                <input class="form-control" class="cantidades" type="number" name="cant"
+                                    placeholder="Por kilo">
+                            </div>
+                            <a href="#" class="btn btn-primary">Hace tu pedido</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card" style="width:395px">
+                        <img class="card-img-top" img class="lasagna" src="fotos/Lasagna.jpg">
+                        <div class="card-body">
+                            <h4 class="card-title">Lasagna</h4>
+                            <div class="form-group">
+                                <label for="cant">Cantidad<p class="card-text">$800</p> </label>
+                                <br>
+                                <input class="form-control" class="cantidades" type="number" name="cant"
+                                    placeholder="Por kilo">
+                            </div>
+                            <a href="#" class="btn btn-primary">Hace tu pedido</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
@@ -124,20 +169,34 @@
                 <option>Lomas de Zamora</option>
                 <option>Palermo</option>
             </select> <br><br>
-                    <input type="submit" class="botonenv2" name="Enviar">
-                    <input type="reset" class="botonborra2" name="Borra">
+            <input type="submit" class="botonenv2" name="Enviar">
+            <input type="reset" class="botonborra2" name="Borra">
         </div>
+
+        </div>
+
         </form>
     </main>
 
     <footer>
         <img class="copy" src="fotos/copy.png" alt="copy">
-         <div class=imgfoot>
-             <img class="fb" src="fotos/facebook.png" alt="fb">
-             <img class="ig" src="fotos/instagram.png" alt="ig">
-             <img class="wpp" src="fotos/whatsapp.png" alt="wpp">
-             <img class="mail" src="fotos/gmail.png" alt="mail" >
-         </div>
-     </footer>
+        <div class=imgfoot>
+            <img class="fb" src="fotos/facebook.png" alt="fb">
+            <img class="ig" src="fotos/instagram.png" alt="ig">
+            <img class="wpp" src="fotos/whatsapp.png" alt="wpp">
+            <img class="mail" src="fotos/gmail.png" alt="mail">
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>

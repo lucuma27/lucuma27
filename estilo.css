@@ -76,13 +76,18 @@ nav ul li a{
 li a:hover {
     background-color:darkorange;
 }
-
+.contacto{
+    margin-left: 30px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-style: italic;
+}
 main article div img{
     width: 50%;
     float: right;
-    height: 550px;
+    height: 650px;
     display: inline-block;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 main article div p{
     width: 50%;
@@ -91,7 +96,7 @@ main article div p{
 
 h1{
     text-align: center;
-    margin-left: 50px;
+    margin-left: 500px;
     margin-top: 10px;
     text-transform: uppercase;
     font-style: italic;
@@ -137,15 +142,9 @@ thead{
     background-color:blanchedalmond;
 }
 
-.contenedor{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-between;
-}
-.columna{
-    display: flex;
-    flex-direction: column;
+.card-columns{
+    margin-left: 250px;
+
 }
 
 .lasagna{
@@ -190,6 +189,7 @@ thead{
 }
 .sucu{
     font-style: italic;
+    color: white;
 }
 .selec{
     background-color:bisque;
@@ -199,7 +199,7 @@ thead{
     font-size:medium;
 }
 .formulario{
-    background:rgba(231, 233, 153, 0.6);
+    background-image: linear-gradient(to bottom, #d8d8c3, #d8d8c3, #d8d8c3, #cacab6, #b6b6a8, #a3a396, #8f8f84, #72726a, #575750, #2c2826,#2e2928);
     width: 90%;
     max-width: 650px;
     margin: auto;

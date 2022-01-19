@@ -1,5 +1,11 @@
 $colorb: black;
 
+@mixin varios($height, $width, $color) {
+    height: $height;
+    width: $width;
+    color: $color;
+}
+
 
 *{
     padding: 0px;
@@ -17,8 +23,7 @@ nav{
     height: 100px;
 
     div img{
-        height: 85px;
-        width: 85px;
+    @include varios(85px, 85px)
     }
 
     p{
@@ -216,9 +221,8 @@ thead{
     color: white;
 }
 .selec{
+    @include varios(30px,150px);
     background-color:bisque;
-    height: 30px;
-    width: 150px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size:medium;
 }
@@ -263,37 +267,15 @@ thead{
     text-align: center;
 }
 .formulario2{
-    background-image: linear-gradient(to bottom, #d8d8c3, #d8d8c3, #d8d8c3, #cacab6, #b6b6a8, #a3a396, #8f8f84, #72726a, #575750, #2c2826,#2e2928);
-    width: 90%;
-    max-width: 650px;
-    margin: auto;
-    padding: 5px 35px;
-    margin-top: 30px;
-    padding-bottom: 30px;
-    border-radius: 3px;
+    @extend .formulario;
 }
+
 .formulario2 .edit_label2{
-    display: block;
-    font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;    
-    outline: none;
-
+    @extend .formulario, .edit_label;
 }
-.formulario2 .edit_label2, textarea{
-    background: rgba(0, 0, 0, .7);
-    border: none;
-    border-bottom: 2px solid red;
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border-radius: 2px;
-    font-size: 14px;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    outline: none;
-    z-index: 1;
 
+.formulario2 .edit_label2, textarea{
+    @extend .formulario, .edit_label, textarea;
 }
 .f2{
     width: 33%;
